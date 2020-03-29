@@ -75,7 +75,7 @@ function App() {
         })
       });
       localStorage.setItem("_token", data.token);
-      console.log(data);
+
       setState({
         ...state,
         location,
