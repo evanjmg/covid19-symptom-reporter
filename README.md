@@ -1,21 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## COVID-19 Symptom Reporter
+
+## Inspiration
+
+We all want to be safe and self isolate but we don't know how widespread this outbreak is nor do we see a reason to stay inside. If we were to know how are others are coping around us, we may be encouraged to self isolate more. We can also use this data to identify new areas where people are getting sick.
+
+## What it does
+
+Maps anonymous symptom and COV-19 statuses across the globe
+
+## How I built it
+
+## Challenges I ran into
+
+Learning clustering and geospatial queries with mongo
+
+## Accomplishments that I'm proud of
+
+It's pretty secure for a hackathon - it includes recaptchas and a session to discourage false reporting and bots.
+
+## What I learned
+
+Clustering and coordinates are not trivial even with all the libraries.
+
+## What's next for COV-19 Symptom Reporter
+
+Improve the map and allow users to zoom out further and move around to see other areas. Guide the user with tooltips to make it easier to understand how it works.
 
 ## Available Scripts
 
 In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -27,18 +40,15 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `npm start`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:4000) to view it in the browser.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### `npm test`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
