@@ -1,0 +1,17 @@
+.form {
+  font-size: 16px;
+  &__radio {
+    text-align: left;
+  }
+}
+
+.bp3-label,
+label.bp3-label {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.form-submit {
+  margin-top: 20px;
+}

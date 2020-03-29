@@ -1,0 +1,35 @@
+$base-font: 16px;
+
+.search {
+  display: block;
+  height: 50px;
+  margin: 20px 0;
+  max-width: 450px;
+  position: relative;
+}
+
+.suggestion-item {
+  font-size: $base-font;
+  padding: 10px;
+  &--active {
+    font-size: $base-font;
+    padding: 10px;
+    //   background-color: #137cbd;
+    //   color: white;
+  }
+}
+
+.autocomplete-dropdown-container {
+  border: 1px solid lightgrey;
+  box-shadow: 17px 13px 7px -12px rgba(0, 0, 0, 0.44);
+  left: 0;
+  min-height: 60px;
+  position: absolute;
+  right: 0;
+  top: 45px;
+}
+
+.loading {
+  font-size: $base-font;
+  padding: 10px;
+}

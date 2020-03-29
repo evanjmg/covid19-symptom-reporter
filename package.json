@@ -3,20 +3,46 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@blueprintjs/core": "^3.24.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@types/google-map-react": "^1.1.5",
     "@types/jest": "^24.9.1",
     "@types/node": "^12.12.32",
     "@types/react": "^16.9.26",
     "@types/react-dom": "^16.9.5",
+    "body-parser": "^1.19.0",
+    "classnames": "^2.2.6",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "google-map-react": "^1.1.7",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
+    "mongoose": "^5.9.6",
+    "nodemon": "^2.0.2",
+    "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-google-recaptcha": "^2.0.1",
+    "react-places-autocomplete": "^7.2.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "typescript": "^3.7.5"
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "supercluster": "^7.0.0",
+    "swr": "^0.1.18",
+    "typescript": "^3.7.5",
+    "use-supercluster": "^0.2.6",
+    "winston": "^3.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-dev-server": "nodemon server/index.js",
+    "start-server": "node server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,5 +61,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1"
   }
 }
