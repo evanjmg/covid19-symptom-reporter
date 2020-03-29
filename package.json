@@ -40,7 +40,7 @@
     "winston": "^3.2.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start-dev": "react-scripts start",
     "start-dev-server": "nodemon server/index.js",
     "start-server": "node server/index.js",
     "build": "react-scripts build",
