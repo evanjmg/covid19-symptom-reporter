@@ -67,7 +67,7 @@ export class Form extends PureComponent<FormProps> {
   renderBody(): JSX.Element {
     return (
       <div className="form">
-        <h1>COV-19 Reporter</h1>
+        <h1>COVID-19 Reporter</h1>
         <h2>Anonymously Report your Status to see your neighborhood</h2>
         Report your symptoms to see who else around you has symptoms. Learn more
         about symptoms
