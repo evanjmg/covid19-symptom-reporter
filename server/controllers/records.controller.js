@@ -1,4 +1,4 @@
-const { Record } = require("../models/record");
+const { Record, zoomLevelToRadius } = require("../models/record");
 const { getBodyFromTokenHeader, signUser } = require("../utility/auth");
 const { logger } = require("../utility/logging");
 const request = require("request-promise");
@@ -35,6 +35,7 @@ async function recordItem(req, res) {
 
     return res.send({ ...jsonRecord, recordId: Record._id, token });
   } catch (err) {
+    console.log(err);
     if (err && err.message) {
       res.status(403).send({ errorMessage: err.message });
     } else {
@@ -52,7 +53,6 @@ async function updateRecords(req, res) {
     await Record.update({ _id: req.params.id, ...req.body });
     res.sendStatus(204);
   } catch (err) {
-    logger.error(err);
     res.sendStatus(500);
   }
 }
@@ -71,7 +71,7 @@ async function getRecords(req, res) {
     const records = await Record.find({
       location: {
         $nearSphere: {
-          $maxDistance: 1000,
+          $maxDistance: zoomLevelToRadius[req.query.zoom] || 1000,
           $geometry: {
             type: "Point",
             coordinates: [parseFloat(lng), parseFloat(lat)]

@@ -73,9 +73,9 @@ export class Form extends PureComponent<FormProps> {
         about symptoms
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://www.who.int/health-topics/coronavirus#tab=tab_3"
         >
-          {" "}
           on the WHO site
         </a>
         .

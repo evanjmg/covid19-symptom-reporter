@@ -24,12 +24,22 @@ export function MapCluster(props: MapClusterProps) {
   const mapRef: any = useRef();
   const [bounds, setBounds] = useState(null);
   const [zoom, setZoom] = useState(10);
+  const [movedLocation, setMovedLocation] = useState({} as any);
   const {
     location: { lat, lng, coordinates }
   } = props;
-  const gLat = lat || (coordinates && coordinates[1]);
-  const gLng = lng || (coordinates && coordinates[0]);
-  const url = `/api/records?lat=${gLat}&lng=${gLng}`;
+  const { lat: mlat, lng: mlng } = movedLocation;
+  const gLat = mlat || lat || (coordinates && coordinates[1]);
+  const gLng = mlng || lng || (coordinates && coordinates[0]);
+  const url = `/api/records?lat=${gLat}&lng=${gLng}&zoom=${zoom}`;
+
+  const onDragEnd = function(gmap) {
+    setMovedLocation({
+      lat: gmap.center.lat(),
+      lng: gmap.center.lng()
+    });
+  };
+
   const { data, error } = useSwr(url, { fetcher: fetcherWithToken });
 
   const records = data && !error ? data.slice(0, 2000) : [];
@@ -88,11 +98,12 @@ export function MapCluster(props: MapClusterProps) {
         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_KEY as string }}
         defaultCenter={{ lat: gLat, lng: gLng } as any}
         defaultZoom={16}
-        options={{ minZoom: 15 }}
+        options={{ minZoom: 6 }}
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map }) => {
           mapRef.current = map;
         }}
+        onDragEnd={onDragEnd}
         onChange={({ zoom, bounds }) => {
           setZoom(zoom);
           setBounds([
