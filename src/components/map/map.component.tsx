@@ -74,7 +74,7 @@ export class Map extends Component<MapProps, MapState> {
                   onClick={this.confirm}
                   intent="success"
                   large
-                  text="Confirm Location Selection"
+                  text="Confirm location selection"
                 />
                 <Button onClick={this.props.back} large text="Go Back" />
               </div>

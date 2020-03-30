@@ -47,7 +47,6 @@ export class LocationSearchInput extends React.Component<
                   className: "location-search-input"
                 })}
                 className="bp3-input bp3-large"
-                placeholder="Search"
               />
             </div>
 

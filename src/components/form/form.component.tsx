@@ -68,7 +68,7 @@ export class Form extends PureComponent<FormProps> {
     return (
       <div className="form">
         <h1>COVID-19 Reporter</h1>
-        <h2>Anonymously Report your Status to see your neighborhood</h2>
+        <h2>Anonymously report your status to see your neighborhood</h2>
         Report your symptoms to see who else around you has symptoms. Learn more
         about symptoms{" "}
         <a
