@@ -29,6 +29,11 @@ app.use(
   })
 );
 app.use("/api", routes);
+
+app.get("/privacy", function(_, res) {
+  res.sendFile(path.join(__dirname, "../public", "privacy-policy.html"));
+});
+
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });

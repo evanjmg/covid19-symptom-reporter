@@ -23,13 +23,6 @@ interface FormProps {
 }
 
 export class Form extends PureComponent<FormProps> {
-  defaultProps = {
-    status: undefined,
-    cStatus: undefined,
-    location: null,
-    hasSubmitted: false
-  };
-
   onChange = evt =>
     this.props.update({
       ...this.props.form,
@@ -133,6 +126,12 @@ export class Form extends PureComponent<FormProps> {
         >
           Submit status and go to map
         </Button>
+        <div className="policy-container">
+          By submitting, you agree to the following{" "}
+          <a target="_blank" rel="noopener noreferrer" href="/privacy">
+            privacy policy
+          </a>
+        </div>
       </Fragment>
     );
   }

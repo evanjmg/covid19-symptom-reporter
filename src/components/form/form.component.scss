@@ -5,6 +5,10 @@
   }
 }
 
+h1 {
+  margin-top: 0;
+}
+
 .bp3-label,
 label.bp3-label {
   display: block;
@@ -13,6 +17,10 @@ label.bp3-label {
 }
 
 .form-submit {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: 20px;
+}
+
+.policy-container {
+  margin-bottom: 30px;
 }
