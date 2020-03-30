@@ -131,7 +131,7 @@ export class Form extends PureComponent<FormProps> {
           disabled={!this.isValid}
           onClick={this.submit}
         >
-          Submit Status and Go to Map
+          Submit status and go to map
         </Button>
       </Fragment>
     );
